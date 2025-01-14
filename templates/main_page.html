@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Главная страница {% endblock %}
+
+{% block content %}
+<section id="banner">
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="{% static 'videos/travel.mp4' %}" type="video/mp4">
+            Ваш браузер не поддерживает воспроизведение видео.
+        </video>
+    </div>
+    <div class="inner">
+        <h1>Добро пожаловать в мир путешествий!</h1>
+        <p>Откройте для себя невероятные места, удивительные культуры и незабываемые приключения. Присоединяйтесь к нам в путешествиях по всему миру!</p>
+        <ul class="actions">
+            <li><a href="#content" class="button big special">Присоединиться</a></li>
+            <li><a href="#elements" class="button big alt">Подробнее</a></li>
+        </ul>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.video-container {
+    position: relative; /* Для того чтобы .inner располагался поверх видео */
+    width: 100%;
+    height: 100vh; /* Можно изменить на нужную высоту */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+     /* Чтобы видео не выходило за пределы контейнера */
+}
+
+.video-container video {
+    width: 100%; /* Растягиваем видео по ширине контейнера */
+    height: 100%; /* Растягиваем видео по высоте контейнера */
+    object-fit: cover; /* Это заставляет видео заполнять весь контейнер */
+}
+
+.inner {
+    position: absolute; /* Делаем блок абсолютным относительно контейнера */
+    top: 50%; /* Располагаем по центру вертикально */
+    left: 50%; /* Располагаем по центру горизонтально */
+    transform: translate(-50%, -50%); /* Точно центрируем */
+    color: white; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    z-index: 10; /* Убедимся, что блок поверх видео */
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для читаемости текста */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a.button.special,
+nav ul li a.button.special:hover {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+section#banner {
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+section#banner .inner h2 {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+section#banner p {
+    color: #777;
+}
+
+section#banner .actions .button {
+    display: inline-block;
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+section#banner .actions .button.alt {
+    background-color: #333;
+}
+
+section.wrapper.style1 {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+section.wrapper.style1 header.major {
+    text-align: center;
+}
+
+section.wrapper.style1 header.major h2 {
+    margin: 0;
+}
+
+section.wrapper.style1 header.major p {
+    margin-top: 10px;
+    color: #777;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+footer h2 {
+    margin-top: 0;
+}
+
+footer ul.icons {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul.icons li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer ul.icons li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.about-section {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.about-container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.about-header h1 {
+  font-size: 36px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 18px;
+  text-align: center;
+  color: #555;
+}
+
+.about-body {
+  margin-top: 40px;
+  text-align: center; /* Центрирование для UX */
+}
+
+.about-image img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Отступ между изображением и текстом */
+}
+
+.about-text {
+  color: #333;
+}
+
+.about-text h2 {
+  font-size: 28px;
+  color: #000;
+  margin-top: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+}
