@@ -1,7 +1,7 @@
 Инструкция: как подготовить и запустить проект
 1. Клонируйте репозиторий и перейдите в папку проекта:
-   git clone https://github.com/ваш-проект.git cd web_django
-2. Создайте и активируйте виртуальное окружение. Убедитесь, что вы находитесь в корне проекта (проверьте с помощью команды `pwd`):
+   git clone https://github.com/annakonashchenko/web_django.git cd web_django
+2. Создайте и активируйте виртуальное окружение. Убедитесь, что вы находитесь в корне проекта:
    python -m venv venv
    source venv/bin/activate  # для Linux/MacOS
    venv\Scripts\activate     # для Windows или
