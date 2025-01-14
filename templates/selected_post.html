@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %} *Список постов* {% endblock %}
+
+{% block content %}
+<section class="article-section">
+
+    <h3>{{ article.title }}</h3>
+
+    <p class="meta">
+        <span class="author">Автор: {{ article.author }}</span> |
+        <span class="date">Дата: {{ article.created_at|date:"d M Y, H:i" }}</span>
+    </p>
+
+    <div class="content-wrapper">
+        {% if article.image %}
+            <div class="image-wrapper">
+                <img src="{{ article.image.url }}" alt="{{ article.title }}">
+            </div>
+        {% endif %}
+        <div class="text-wrapper">
+            <div class="content">
+                {{ article.content }}
+            </div>
+        </div>
+    </div>
+
+    <div class="back-button">
+        <a href="{% url 'posts_page' %}" class="btn-back">Назад</a>
+    </div>
+
+</section>
+{% endblock %}
+

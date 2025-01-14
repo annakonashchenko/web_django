@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %} О нас {% endblock %}
+{% load static %}
+{% block content %}
+<div class=" ">
+<h1>Оставьте ваш отзыв</h1>
+
+{% if success %}
+        <p style="color: green;">Ваш комментарий успешно отправлен!</p>
+    {% endif %}
+
+    <form method="post" action="">
+        {% csrf_token %}
+
+        <div>
+            <label>Полное имя:</label>
+            {{ form.full_name }}
+        </div>
+
+        <div>
+            <label>Электронная почта:</label>
+            {{ form.email }}
+        </div>
+
+        <div>
+            <label>Текст комментария:</label>
+            {{ form.comment_text }}
+        </div>
+
+        <button type="submit">Отправить</button>
+    </form>
+    <h2>Все отзывы</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>
+                <strong>{{ comment.full_name }}</strong><small>({{ comment.email }})</small>: {{ comment.comment_text }} <br>
+
+            </li>
+        {% empty %}
+            <li>Пока нет отзывов.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

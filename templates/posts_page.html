@@ -2,8 +2,22 @@
 {% block title %} О нас {% endblock %}
 {% load static %}
 {% block content %}
-<div class=" ">
-<h1>Все посты</h1>
-
+<div class="articles-list">
+    {% for article in articles %}
+        <div class="article-item">
+            {% if article.image %}
+                <div class="image-wrapper2">
+                    <img src="{{ article.image.url }}" alt="{{ article.title }}">
+                </div>
+            {% endif %}
+            <div class="text-wrapper">
+                <h2>{{ article.title }}</h2>
+                <p>{{ article.content|slice:200 }}...</p>
+                <p><strong>Автор:</strong> {{ article.author }}</p>
+                <p><strong>Дата публикации:</strong> {{ article.publish_date|date:"Y-m-d" }}</p>
+                <a href="{% url 'selected_post' article.id %}" class="btn">Читать далее</a>
+            </div>
         </div>
+    {% endfor %}
+</div>
 {% endblock %}
